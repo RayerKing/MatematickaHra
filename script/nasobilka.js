@@ -9,6 +9,19 @@ const cvika = document.getElementById("cvika");
 const ostryTest = document.getElementById("ostryTest");
 // flex pro příklady
 const flex = document.querySelector(".flex");
+// text pro skore
+const textScore = document.getElementById("skoreText");
+// div pro příklady v CHallengi
+const divPriklady = document.getElementById("prikladyChall");
+// div pro časovač
+const divTime = document.getElementById("prikladyChallTime");
+// proměnné pro timeOut
+let cas = 10;
+let prodlouzeni = 2;
+let interval;
+let score;
+let cislo1;
+let cislo2;
 // pole násobilky
 const nasobilka = [
   { prvni: 2, druhy: 2 },
@@ -63,6 +76,8 @@ let vyber = [];
 let vysledky = [];
 // počet příkladů
 const pocetPrikladu = 3;
+// proměnná, bude udržovat výsledek u challenge
+let vysledekChallenge;
 // funkce pro procvičování
 function training() {
   console.log("Spouštím funkci Training");
@@ -74,13 +89,15 @@ function training() {
   cvikButton.addEventListener("click", kontrola);
 }
 
+// funkce pro vytvoření kopie pole s násobilkou, 
+// odkud odstraňuju vybrané indexy, aby nebyly duplikáty
 function test() {
   vyber = [];
   const kopie = nasobilka.slice();
   for (let i = 0; i < pocetPrikladu; i++) {
     const index = Math.floor(Math.random() * kopie.length);
     console.log("Index je: " + index);
-
+// přidání vybraných příkladů do pole vyber
     vyber.push({
       prvni: kopie[index].prvni,
       druhy: kopie[index].druhy,
@@ -91,52 +108,157 @@ function test() {
   console.table(kopie);
   console.table(vyber);
 
+  // pro každý prvek vytvoří div s určitými parametry
   vyber.forEach((element) => {
     const box = document.createElement("div");
     box.classList.add("inner-flex");
     box.innerHTML = `<strong>${element.prvni} x ${element.druhy} 
-    = </strong><input type="number" class="inputNasobilka">
-    <span class="komentar"></span>`
-    ;
+    = </strong><input type="number" class="inputNasobilka" min="0" max="100">
+    <span class="komentar"></span>`;
+    
 
     flex.prepend(box);
   });
 }
 
+// načítá inputy a kontroluje, zda všechny inputy byly vyplněny
 function kontrola() {
   console.log("Kontrola");
   let inputs = [...document.querySelectorAll(".inputNasobilka")];
-  
+
   inputs.reverse();
-  
 
   vysledky = inputs.map((input) => input.value);
   if (vysledky.some((element) => element == "")) {
     alert("praadzno");
   } else {
     porovnaniVysledku();
-    
   }
   console.table(vysledky);
 }
 
-function porovnaniVysledku(){
-    let komentare = [...document.querySelectorAll(".komentar")];
-    komentare.reverse();
-    
-    for(let i = 0; i < vysledky.length; i++){
-        const a = vyber[i].vysledek;
-        const b = vysledky[i];
-        console.log(a);
-        console.log(b);
-        
-        if(a == b){
-            komentare[i].textContent = "správně";
-        } else {
-            komentare[i].textContent = "špatně";
-        }
+// kontroluje správnost výsledku přes indexi dvou polí a porovnání jejich hodnot
+function porovnaniVysledku() {
+  let komentare = [...document.querySelectorAll(".komentar")];
+  komentare.reverse();
+  let score = 0;
+  for (let i = 0; i < vysledky.length; i++) {
+    const a = vyber[i].vysledek;
+    const b = vysledky[i];
+    console.log(a);
+    console.log(b);
+
+    if (a == b) {
+      komentare[i].textContent = "správně";
+      score++;
+    } else {
+      komentare[i].textContent = "špatně";
     }
+  }
+  textScore.classList.remove("hiddenClass");
+  textScore.classList.add("skoreText");
+  
+  textScore.innerHTML = `<p class="textCelkScore">Celkové skóre: ${score} z ${pocetPrikladu}</p>`;
+  
+  
+
+  // po vyhodnocení přepnout tlačítko na další kolo
+cvikButton.innerText = "Další kolo";
+cvikButton.removeEventListener("click", kontrola);
+cvikButton.addEventListener("click", nextRound);
+
+}
+// funkce pro vyčištění příkladů a polí
+function clearPriklady(){
+  flex.querySelectorAll(".inner-flex").forEach(element => element.remove());
+  textScore.classList.remove("textSkore");
+  textScore.classList.add("hiddenClass");
+  vyber = [];
+  vysledky = [];
+}
+// funkce pro další kolo
+function nextRound(){
+  clearPriklady();
+  cvikButton.innerText = "Potvrdit";
+  cvikButton.removeEventListener("click", nextRound);
+  cvikButton.addEventListener("click", kontrola);
+  test();
+}
+// funkce pro spuštění challenge
+function exam(){
+  cas = 10;
+  score = 0;
+  console.log("Exam");
+  hlavniSekce.classList.add("hiddenClass");
+  cvika.classList.add("hiddenClass");
+  naOstro.innerText = "Potvrdit";
+  interval = setInterval(() => {
+    cas--;
+    divTime.innerHTML = `Zbývající čas: ${cas}`
+    
+
+    if(cas < 0){
+      clearInterval(interval);
+      
+      timeOut();
+    }
+  }, 1000);
+  testExam();
+  naOstro.removeEventListener("click", exam);
+  naOstro.addEventListener("click", examControl);
+}
+// funkce pro generování příkladů
+function testExam(){
+  
+  const random = Math.floor(Math.random() * nasobilka.length);
+  cislo1 = nasobilka[random].prvni;
+  cislo2 = nasobilka[random].druhy;
+  divPriklady.innerHTML = `${cislo1} x ${cislo2} = <input id="inputChal" type="number" min="0" max="100">`;
+  divTime.innerHTML = `Zbývající čas: ${cas}`;
+  textScore.innerHTML = `Skóre: ${score}`;
+  
+
+  
+
+  
+}
+
+function examControl(){
+  let inputChal = document.getElementById("inputChal").value;
+  vysledekChallenge = cislo1 * cislo2;
+  if(inputChal == vysledekChallenge){
+    score++;
+    textScore.innerHTML = `Skóre: ${score}`;
+    cas += prodlouzeni;
+    divTime.innerText = `Zbývající čas: ${cas}`;
+    testExam();
+  } else {
+    clearInterval(interval);
+    konecHry();
+  }
+}
+
+function konecHry(){
+  divPriklady.innerHTML = `<h2>Konec hry</h2>
+  <p><b>Špatný výsledek!</b>
+  <p>Správný výsledek:  ${cislo1} x ${cislo2} = ${vysledekChallenge}</p>`;
+  divTime.innerText = "";
+  naOstro.removeEventListener("click", examControl);
+  naOstro.innerText = "Znovu?"
+  naOstro.addEventListener("click", exam);
+}
+
+function timeOut(){
+  const a = cislo1 * cislo2;
+  divPriklady.innerHTML = `<h2>Konec hry</h2>
+  <p><b>Bohužel ti došel čas.</b>
+  <p>Správný výsledek:  ${cislo1} x ${cislo2} = ${a}</p>`;
+  divTime.innerText = "";
+  naOstro.removeEventListener("click", examControl);
+  naOstro.innerText = "Znovu?"
+  naOstro.addEventListener("click", exam);
 }
 
 // Listenery na tlačítkách
 cvikButton.addEventListener("click", training);
+naOstro.addEventListener("click", exam);

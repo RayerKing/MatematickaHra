@@ -73,7 +73,7 @@ p {
 }
 
 /* === Karty === */
-.inner-flex {
+.inner-flex, .inner-flex-btn {
   width: min(100%, 640px);
   background: #fff;
   border: 1px solid var(--border);
@@ -85,7 +85,7 @@ p {
   gap: 12px;
   transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
-.inner-flex:hover {
+.inner-flex:hover, .inner-flex-btn {
   transform: translateY(-1px);
   box-shadow: 0 12px 24px rgba(2, 6, 23, 0.10);
   border-color: #cbd5e1;
@@ -138,6 +138,24 @@ p {
 .hiddenClass {
   display: none;
 }
+
+.skoreText {
+  font-size: 1.4rem;        /* větší písmo */
+  font-weight: bold;        /* tučně */
+  text-align: center;       /* na střed */
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #f0f4ff;      /* jemné pozadí */
+  color: #1a4ed8;           /* výraznější modrá */
+  border: 2px solid #1a4ed8;
+  display: inline-block;    /* ať to není přes celou šířku */
+}
+
+
+
+
+
 
 /* === Responsivita === */
 @media (max-width: 680px) {
