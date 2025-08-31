@@ -152,6 +152,61 @@ p {
   display: inline-block;    /* ať to není přes celou šířku */
 }
 
+:root { --gap: 12px; }
+
+/* Kontejnery pro karty (každá rarita má svůj) */
+.picturesFlex{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;      /* vycentruje řádky */
+  gap:var(--gap);
+}
+
+/* Jedna karta */
+.picturesFlex .pictures{
+  /* 4 na řádek – bez media queries */
+  flex: 0 1 calc((100% - 3*var(--gap)) / 4);
+  max-width: calc((100% - 3*var(--gap)) / 4);
+  text-align:center;
+  box-sizing:border-box;
+}
+
+.picturesFlex .pictures img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:10px;          /* volitelné */
+}
+
+/* rámeček pro každou sekci */
+.flexAlbum .inner-flexAlbum{
+  background: #fff;
+  border: 1px solid #e6eaf2;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, .06);
+}
+
+/* nadpis uvnitř rámečku */
+.flexAlbum h2{
+  margin: 0 0 12px;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+/* volitelný barevný proužek nahoře – používá CSS proměnnou --accent */
+.flexAlbum .inner-flexAlbum::before{
+  content: "";
+  display:block;
+  height: 6px;
+  border-radius: 16px 16px 0 0;
+  margin: -18px -20px 12px;
+  background: var(--accent, #4f46e5); /* default barva */
+}
+
+
+
 
 
 
