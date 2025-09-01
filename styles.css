@@ -205,6 +205,12 @@ p {
   background: var(--accent, #4f46e5); /* default barva */
 }
 
+.album-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding-bottom: 20px; /* volitelné pro mezeru od obsahu */
+}
 
 
 
