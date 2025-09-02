@@ -13,7 +13,14 @@
   <a href="priklady/nasobilka.html">Malá násobilka</a>
   <a href="album.html">Album</a>
 </nav>
+<section>
+  <div class="status-bar">
+  <div class="stat"><span>Level:</span><strong id="ui-level">0</strong></div>
+  <div class="stat"><span id="pokus">Coins:</span><strong id="pokusCoins">0</strong></div>
+  
+</div>
 
+</section>
     <section id="hlavniSekce">
       <h1>Album</h1>
       <p>
@@ -22,8 +29,11 @@
         molestias vitae, repudiandae soluta quod quasi quidem velit at
         perferendis rem suscipit!
       </p>
-      <!-- TODO vymyslet lépe umístění... jen pro kontrolu, zda vše funguje -->
-      <p id="pokus">Coins: <span id="pokusCoins"></span></p>
+      
+      
+      <div class="album-btn">
+                <button class="btn">Koupit Balíček (50)</button>
+            </div>
     </section>
     <section>
         <div class="flexAlbum">
@@ -81,16 +91,14 @@
             </div>
     </section>  
           
-            <div class="album-btn">
-                <button class="btn">Koupit Balíček (50)</button>
-            </div>
+            
             <!-- TODO koupit balicek 10x 
             <div class="inner-flex">
                 <button class="btn">Challenge</button>
             </div>-->
         
         
-    
+    <script src="script.js"></script>
     <script src="script/album.js"></script>
   </body>
 </html>

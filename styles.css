@@ -212,6 +212,16 @@ p {
   padding-bottom: 20px; /* volitelné pro mezeru od obsahu */
 }
 
+.sticky-header { position: sticky; top: 0; z-index: 1000; }
+.status-bar{
+  position: sticky; top: 56px; /* nebo dej status + nav do jednoho wrapperu */
+  display:flex; justify-content:center; gap:2rem; 
+  padding:.5rem 1rem; font-weight:600;
+  background: rgba(255,255,255,.8); backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.status-bar .stat{ display:flex; gap:.5rem; align-items:center; }
+@media (max-width:600px){ .status-bar{ gap:1rem; font-size:.95rem; flex-wrap:wrap; } }
 
 
 
