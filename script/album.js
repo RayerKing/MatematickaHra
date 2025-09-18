@@ -7,10 +7,15 @@ const commonDiv = document.getElementById("common");
 
 const button = document.querySelector(".album-btn .btn");
 
-// TODO relativni cesta je pictures/zadniStrana.png, dát u všech - splněno
+const albumDiv = document.querySelector(".album-okno");
+
+albumDiv.classList.remove("album-okno");
+albumDiv.classList.add("hiddenClass");
+
 const mythic = [
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Mythic č.1",
     rarity: "mythic",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
@@ -20,14 +25,16 @@ const mythic = [
 
 const legendary = [
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Legendary č.1",
     rarity: "legendary",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Legendary č.2",
     rarity: "legendary",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
@@ -37,21 +44,24 @@ const legendary = [
 
 const epic = [
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Epic č.1",
     rarity: "epic",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Epic č.2",
     rarity: "epic",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Epic č.3",
     rarity: "epic",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
@@ -61,28 +71,32 @@ const epic = [
 
 const rare = [
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Rare č.1",
     rarity: "rare",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Rare č.2",
     rarity: "rare",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Rare č.3",
     rarity: "rare",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Rare č.4",
     rarity: "rare",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
@@ -92,56 +106,64 @@ const rare = [
 
 const uncommon = [
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Uncommon č.1",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Uncommon č.2",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Uncommon č.3",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Uncommon č.4",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Uncommon č.5",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Uncommon č.6",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Uncommon č.7",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Uncommon č.8",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
@@ -151,112 +173,128 @@ const uncommon = [
 
 const common = [
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Tabule",
+    rarity: "common",
+    zadniStrana: "pictures/zadniStrana.png",
+    predniStrana: "pictures/common/tabule.png",
+    own: false,
+  },
+  {
+    nameBefore: "[Neznámé]",
+    name: "Common č.2",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.3",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.4",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.5",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.6",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.7",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.8",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.9",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.10",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.11",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.12",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.13",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.14",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.15",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
     own: false,
   },
   {
-    name: "",
-    rarity: "common",
-    zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
-    own: false,
-  },
-  {
-    name: "",
+    nameBefore: "[Neznámé]",
+    name: "Common č.16",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
     predniStrana: "",
@@ -268,6 +306,7 @@ loadAlbum();
 
 spusteniAlbum();
 
+// generování alba
 function spusteniAlbum() {
   mythic.forEach((element, index) => {
     const divMythic = document.createElement("div");
@@ -276,12 +315,15 @@ function spusteniAlbum() {
     let img;
     if (element.own == true) {
       img = `<img src="${element.predniStrana}" alt="Přední strana karty - ${element.name}">`;
+      divMythic.innerHTML = `<h3>${element.name}</h3>
+        ${img}`;
+      mythicDiv.appendChild(divMythic);
     } else {
       img = `<img src="${element.zadniStrana}" alt="Zadní strana karty">`;
-    }
-    divMythic.innerHTML = `<h3>${element.name}</h3>
+      divMythic.innerHTML = `<h3>${element.nameBefore}</h3>
         ${img}`;
-    mythicDiv.appendChild(divMythic);
+      mythicDiv.appendChild(divMythic);
+    }
   });
 
   legendary.forEach((element, index) => {
@@ -291,12 +333,15 @@ function spusteniAlbum() {
     let img;
     if (element.own == true) {
       img = `<img src="${element.predniStrana}" alt="Přední strana karty - ${element.name}">`;
+      divLegendary.innerHTML = `<h3>${element.name}</h3>
+        ${img}`;
+      legendaryDiv.appendChild(divLegendary);
     } else {
       img = `<img src="${element.zadniStrana}" alt="Zadní strana karty">`;
-    }
-    divLegendary.innerHTML = `<h3>${element.name}</h3>
+      divLegendary.innerHTML = `<h3>${element.nameBefore}</h3>
         ${img}`;
-    legendaryDiv.appendChild(divLegendary);
+      legendaryDiv.appendChild(divLegendary);
+    }
   });
 
   epic.forEach((element, index) => {
@@ -306,12 +351,15 @@ function spusteniAlbum() {
     let img;
     if (element.own == true) {
       img = `<img src="${element.predniStrana}" alt="Přední strana karty - ${element.name}">`;
+      divEpic.innerHTML = `<h3>${element.name}</h3>
+        ${img}`;
+      epicDiv.appendChild(divEpic);
     } else {
       img = `<img src="${element.zadniStrana}" alt="Zadní strana karty">`;
-    }
-    divEpic.innerHTML = `<h3>${element.name}</h3>
+      divEpic.innerHTML = `<h3>${element.nameBefore}</h3>
         ${img}`;
-    epicDiv.appendChild(divEpic);
+      epicDiv.appendChild(divEpic);
+    }
   });
 
   rare.forEach((element, index) => {
@@ -321,12 +369,15 @@ function spusteniAlbum() {
     let img;
     if (element.own == true) {
       img = `<img src="${element.predniStrana}" alt="Přední strana karty - ${element.name}">`;
+      divRare.innerHTML = `<h3>${element.name}</h3>
+        ${img}`;
+      rareDiv.appendChild(divRare);
     } else {
       img = `<img src="${element.zadniStrana}" alt="Zadní strana karty">`;
-    }
-    divRare.innerHTML = `<h3>${element.name}</h3>
+      divRare.innerHTML = `<h3>${element.nameBefore}</h3>
         ${img}`;
-    rareDiv.appendChild(divRare);
+      rareDiv.appendChild(divRare);
+    }
   });
 
   uncommon.forEach((element, index) => {
@@ -336,12 +387,15 @@ function spusteniAlbum() {
     let img;
     if (element.own == true) {
       img = `<img src="${element.predniStrana}" alt="Přední strana karty - ${element.name}">`;
+      divUncommon.innerHTML = `<h3>${element.name}</h3>
+        ${img}`;
+      uncommonDiv.appendChild(divUncommon);
     } else {
       img = `<img src="${element.zadniStrana}" alt="Zadní strana karty">`;
-    }
-    divUncommon.innerHTML = `<h3>${element.name}</h3>
+      divUncommon.innerHTML = `<h3>${element.nameBefore}</h3>
         ${img}`;
-    uncommonDiv.appendChild(divUncommon);
+      uncommonDiv.appendChild(divUncommon);
+    }
   });
 
   common.forEach((element, index) => {
@@ -351,12 +405,15 @@ function spusteniAlbum() {
     let img;
     if (element.own == true) {
       img = `<img src="${element.predniStrana}" alt="Přední strana karty - ${element.name}">`;
+      divCommon.innerHTML = `<h3>${element.name}</h3>
+        ${img}`;
+      commonDiv.appendChild(divCommon);
     } else {
       img = `<img src="${element.zadniStrana}" alt="Zadní strana karty">`;
-    }
-    divCommon.innerHTML = `<h3>${element.name}</h3>
+      divCommon.innerHTML = `<h3>${element.nameBefore}</h3>
         ${img}`;
-    commonDiv.appendChild(divCommon);
+      commonDiv.appendChild(divCommon);
+    }
   });
 }
 
@@ -370,7 +427,7 @@ const mythicPravdepodobnost = 100; // 100
 // funkce pro výběr kartičky na základě nějaké pravděpodobnosti
 function vyberKarty() {
   const pravdepodobnost = Math.floor(Math.random() * 100);
-  //const pravdepodobnost = 98;
+  //const pravdepodobnost = 100;
   // pro kartu common
   if (pravdepodobnost <= commonPravdepodobnost) {
     console.log("common");
@@ -380,7 +437,7 @@ function vyberKarty() {
       const div = document.querySelector(
         `#common .pictures[data-index="${random}"]`
       );
-
+      vstupKarty.innerHTML = `<img src="${common[random].predniStrana}" alt="Přední strana karty - ${common[random].name}">`;
       div.innerHTML = `<h3>${common[random].name}</h3>
       <img src="${common[random].predniStrana}" alt="Přední strana karty - ${common[random].name}">`;
       saveAlbum();
@@ -397,7 +454,7 @@ function vyberKarty() {
       const div = document.querySelector(
         `#uncommon .pictures[data-index="${random}"]`
       );
-
+      vstupKarty.innerHTML = `<img src="${uncommon[random].predniStrana}" alt="Přední strana karty - ${uncommon[random].name}">`;
       div.innerHTML = `<h3>${uncommon[random].name}</h3>
       <img src="${uncommon[random].predniStrana}" alt="Přední strana karty - ${uncommon[random].name}">`;
       saveAlbum();
@@ -414,7 +471,7 @@ function vyberKarty() {
       const div = document.querySelector(
         `#rare .pictures[data-index="${random}"]`
       );
-
+      vstupKarty.innerHTML = `<img src="${rare[random].predniStrana}" alt="Přední strana karty - ${rare[random].name}">`;
       div.innerHTML = `<h3>${rare[random].name}</h3>
       <img src="${rare[random].predniStrana}" alt="Přední strana karty - ${rare[random].name}">`;
       saveAlbum();
@@ -431,7 +488,7 @@ function vyberKarty() {
       const div = document.querySelector(
         `#epic .pictures[data-index="${random}"]`
       );
-
+      vstupKarty.innerHTML = `<img src="${epic[random].predniStrana}" alt="Přední strana karty - ${epic[random].name}">`;
       div.innerHTML = `<h3>${epic[random].name}</h3>
       <img src="${epic[random].predniStrana}" alt="Přední strana karty - ${epic[random].name}">`;
       saveAlbum();
@@ -448,7 +505,7 @@ function vyberKarty() {
       const div = document.querySelector(
         `#legendary .pictures[data-index="${random}"]`
       );
-
+      vstupKarty.innerHTML = `<img src="${legendary[random].predniStrana}" alt="Přední strana karty - ${legendary[random].name}">`;
       div.innerHTML = `<h3>${legendary[random].name}</h3>
       <img src="${legendary[random].predniStrana}" alt="Přední strana karty - ${legendary[random].name}">`;
       saveAlbum();
@@ -465,7 +522,7 @@ function vyberKarty() {
       const div = document.querySelector(
         `#mythic .pictures[data-index="${random}"]`
       );
-
+      vstupKarty.innerHTML = `<img src="${mythic[random].predniStrana}" alt="Přední strana karty - ${mythic[random].name}">`;
       div.innerHTML = `<h3>${mythic[random].name}</h3>
       <img src="${mythic[random].predniStrana}" alt="Přední strana karty - ${mythic[random].name}">`;
       saveAlbum();
@@ -475,6 +532,7 @@ function vyberKarty() {
   }
 }
 
+// funkce pro kontrolu, zda má uživatel dost peněz
 function moneyNeeded() {
   if (coin >= price) {
     setCoins(coin - price);
@@ -485,4 +543,26 @@ function moneyNeeded() {
   }
 }
 
-button.addEventListener("click", moneyNeeded);
+
+// funkce , která dává div pro koupi karty
+const vstupKarty = document.getElementById("vstupKarty");
+
+function vyberKartyDiv() {
+  const img = `<img src="pictures/zadniStrana.png" alt="Zadní strana karty">`;
+  console.log("Volám div alba");
+  albumDiv.classList.remove("hiddenClass");
+  albumDiv.classList.add("album-okno");
+  vstupKarty.innerHTML = `${img}`;
+  console.log("mythic.zadniStrana =", mythic?.zadniStrana);
+}
+
+const nakupKartyClose = document.querySelector(".album-close");
+const nakupKartyButton = document.getElementById("nakupBalicku");
+
+nakupKartyClose.addEventListener("click", () => {
+  albumDiv.classList.remove("album-okno");
+  albumDiv.classList.add("hiddenClass");
+});
+
+button.addEventListener("click", vyberKartyDiv);
+nakupKartyButton.addEventListener("click", moneyNeeded);

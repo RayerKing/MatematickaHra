@@ -9,18 +9,20 @@
   <body>
     <header>Matematika hrou</header>
     <nav class="nav-flex">
-  <a href="../index.html">Domů</a>
-  <a href="../priklady/nasobilka.html">Malá násobilka</a>
-  <a href="../album.html">Album</a>
-</nav>
-<section>
-  <div class="status-bar">
-  <div class="stat"><span>Level:</span><strong id="ui-level">0</strong></div>
-  <div class="stat"><span id="pokus">Coins:</span><strong id="pokusCoins">0</strong></div>
-  
-</div>
-
-</section>
+      <a href="../index.html">Domů</a>
+      <a href="../priklady/nasobilka.html">Malá násobilka</a>
+      <a href="../album.html">Album</a>
+    </nav>
+    <section>
+      <div class="status-bar">
+        <div class="stat">
+          <span>Level:</span><strong id="ui-level">0</strong>
+        </div>
+        <div class="stat">
+          <span id="pokus">Coins:</span><strong id="pokusCoins">0</strong>
+        </div>
+      </div>
+    </section>
 
     <section id="hlavniSekce">
       <h1>Co to je <b>Malá Násobilka</b></h1>
@@ -30,20 +32,27 @@
         molestias vitae, repudiandae soluta quod quasi quidem velit at
         perferendis rem suscipit!
       </p>
+
+      <p id="odmenaKomentar"></p>
     </section>
     <section>
-        <div class="flex">
-            <div class="inner-flex-time" id="prikladyChallTime"></div>
-            <div class="inner-flex-time" id="prikladyChall"></div>
-            <div id="skoreText"></div>
-            <div class="inner-flex-btn" id="cvika">
-                <button id="cvikNasobilka" class="btn">Procvičovat</button>
-            </div>
-            <div class="inner-flex" id="ostryTest">
-                <button id="naOstroNasobilka" class="btn">Challenge</button>
-            </div>
+      <div id="alertSplneno">
+        <h2>Malá násobilka splněna!</h2>
+        <p id="alertOdstavec"></p>
+        <button id="alertButton" class="alert-innerFlex">Zavřít</button>
+      </div>
+      <div class="flex">
+        <div class="inner-flex-time" id="docasneStaty"></div>
+        <div class="inner-flex-time" id="prikladyChallTime"></div>
+        <div class="inner-flex-time" id="prikladyChall"></div>
+        <div id="skoreText"></div>
+        <div class="inner-flex-btn" id="cvika">
+          <button id="cvikNasobilka" class="btn">Procvičovat</button>
         </div>
-        
+        <div class="inner-flex" id="ostryTest">
+          <button id="naOstroNasobilka" class="btn">Challenge</button>
+        </div>
+      </div>
     </section>
     <script src="../script.js"></script>
     <script src="../script/nasobilka.js"></script>
