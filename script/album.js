@@ -18,7 +18,7 @@ const mythic = [
     name: "Mythic č.1",
     rarity: "mythic",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
 ];
@@ -29,7 +29,7 @@ const legendary = [
     name: "Legendary č.1",
     rarity: "legendary",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -37,7 +37,7 @@ const legendary = [
     name: "Legendary č.2",
     rarity: "legendary",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
 ];
@@ -48,7 +48,7 @@ const epic = [
     name: "Epic č.1",
     rarity: "epic",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -56,7 +56,7 @@ const epic = [
     name: "Epic č.2",
     rarity: "epic",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -64,7 +64,7 @@ const epic = [
     name: "Epic č.3",
     rarity: "epic",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
 ];
@@ -75,7 +75,7 @@ const rare = [
     name: "Rare č.1",
     rarity: "rare",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -83,7 +83,7 @@ const rare = [
     name: "Rare č.2",
     rarity: "rare",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -91,7 +91,7 @@ const rare = [
     name: "Rare č.3",
     rarity: "rare",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -99,7 +99,7 @@ const rare = [
     name: "Rare č.4",
     rarity: "rare",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
 ];
@@ -110,7 +110,7 @@ const uncommon = [
     name: "Uncommon č.1",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -118,7 +118,7 @@ const uncommon = [
     name: "Uncommon č.2",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -126,7 +126,7 @@ const uncommon = [
     name: "Uncommon č.3",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -134,7 +134,7 @@ const uncommon = [
     name: "Uncommon č.4",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -142,7 +142,7 @@ const uncommon = [
     name: "Uncommon č.5",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -150,7 +150,7 @@ const uncommon = [
     name: "Uncommon č.6",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -158,7 +158,7 @@ const uncommon = [
     name: "Uncommon č.7",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -166,7 +166,7 @@ const uncommon = [
     name: "Uncommon č.8",
     rarity: "uncommon",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
 ];
@@ -185,7 +185,7 @@ const common = [
     name: "Common č.2",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -193,7 +193,7 @@ const common = [
     name: "Common č.3",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -201,7 +201,7 @@ const common = [
     name: "Common č.4",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -209,7 +209,7 @@ const common = [
     name: "Common č.5",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -217,7 +217,7 @@ const common = [
     name: "Common č.6",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -225,7 +225,7 @@ const common = [
     name: "Common č.7",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -233,7 +233,7 @@ const common = [
     name: "Common č.8",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -241,7 +241,7 @@ const common = [
     name: "Common č.9",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -249,7 +249,7 @@ const common = [
     name: "Common č.10",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -257,7 +257,7 @@ const common = [
     name: "Common č.11",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -265,7 +265,7 @@ const common = [
     name: "Common č.12",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -273,7 +273,7 @@ const common = [
     name: "Common č.13",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -281,7 +281,7 @@ const common = [
     name: "Common č.14",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -289,7 +289,7 @@ const common = [
     name: "Common č.15",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
   {
@@ -297,7 +297,7 @@ const common = [
     name: "Common č.16",
     rarity: "common",
     zadniStrana: "pictures/zadniStrana.png",
-    predniStrana: "",
+    predniStrana: "pictures/common/placeholderCard.png",
     own: false,
   },
 ];

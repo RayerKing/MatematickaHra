@@ -240,7 +240,7 @@ function exam() {
   score = 0;
   docasneStaty.innerHTML = `<h3>Body za kolo</h3>
     <div class="docasnyFlex">
-    <div class="inner-docasnyFlex">Exp: <span id="docasneExpText">${docasneExp}</span></div>
+    <div class="inner-docasnyFlex hiddenClass">Exp: <span id="docasneExpText">${docasneExp}</span></div>
     <div class="inner-docasnyFlex"><span id="implifikator">+ 1</span></div>
     <div class="inner-docasnyFlex">Coins: <span id="docasneCoinsText">${docasneCoins}</span></div>
     </div>

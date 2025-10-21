@@ -1,7 +1,7 @@
 const coinsDiv = document.getElementById("pokusCoins");
 const albumCoin = document.querySelector(".coins-album-okno");
 const price = 50;
-let coin = parseInt(localStorage.getItem("coin")) || 500;
+let coin = parseInt(localStorage.getItem("coin")) || 0;
 
 
 coinsDiv.textContent = coin;

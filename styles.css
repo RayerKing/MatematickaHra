@@ -308,7 +308,7 @@ p {
 
   min-width: 100px;
   min-height: 100px;
-  border: 2px dashed #aaa;
+  /*border: 2px dashed #aaa;*/
   padding: 10px;
 }
 
@@ -511,3 +511,76 @@ p {
     max-width: 100%;
   }
 }
+
+.table-nasobilka {
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.table-nasobilka th,
+.table-nasobilka td {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.table-nasobilka thead {
+  background: #2563eb;
+  color: white;
+}
+
+.table-nasobilka tbody tr:nth-child(even) {
+  background: #f3f4f6;
+}
+
+.table-nasobilka tbody tr:hover {
+  background: #e0e7ff;
+  transition: 0.3s;
+}
+
+.table-nasobilka {
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.table-nasobilka th,
+.table-nasobilka td {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Horní řádek (1–10) */
+.table-nasobilka thead {
+  background: #2563eb;
+  color: white;
+}
+
+/* Levý sloupec (1–10 vlevo) */
+.table-nasobilka tbody th {
+  background: #bfdbfe; /* světle modrá */
+  color: #1e3a8a;      /* tmavě modrý text */
+  font-weight: 600;
+}
+
+/* Střídavé barvy řádků */
+.table-nasobilka tbody tr:nth-child(even) td {
+  background: #f3f4f6;
+}
+
+/* Efekt při najetí myší */
+.table-nasobilka tbody tr:hover td {
+  background: #e0e7ff;
+  transition: 0.3s;
+}
+

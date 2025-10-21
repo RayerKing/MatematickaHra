@@ -6,8 +6,7 @@ Interaktivní miniprojekt na procvičování **malé násobilky** + příprava *
 
 ## Stav projektu (MVP)
 - **Násobilka:** logika výběru příkladů a vyhodnocování **funguje, jak má**.
-- **CSS:** je potřeba **doladit vizuál** (rozestupy, rámečky sekcí, responsivita).
-- **Album:** funkční, chybí jen obrázky a trocha vizuálu
+- **Album:** funkční
 
 ---
 
@@ -19,7 +18,4 @@ Interaktivní miniprojekt na procvičování **malé násobilky** + příprava *
 ---
 
 ## Commit
-- Opraveny nalezené chyby.
-- Přidané peníze jako odměna za hraní Násobilky.
-- Plně funkční album. Chybí jen drobné vizuální úpravy.
-- Logika levelování chybí stále.
+- Dokončení projektu.
