@@ -180,7 +180,15 @@ function porovnaniVysledku() {
       komentare[i].textContent = "Špatně";
     }
   }
+textScore.classList.remove("hiddenClass");
+  textScore.classList.add("skoreText");
 
+  textScore.innerHTML = `<p class="textCelkScore">Celkové skóre: ${score} z ${pocetPrikladu}</p>`;
+
+  // po vyhodnocení přepnout tlačítko na další kolo
+  cvikButton.innerText = "Další kolo";
+  cvikButton.removeEventListener("click", kontrola);
+  cvikButton.addEventListener("click", nextRound);
   // podmínka pro ukázání okna, že byly přidány odměny
   if (!cviceniSplneno) {
     if (score == pocetPrikladu) {
@@ -198,15 +206,7 @@ function porovnaniVysledku() {
     }
   }
 
-  textScore.classList.remove("hiddenClass");
-  textScore.classList.add("skoreText");
-
-  textScore.innerHTML = `<p class="textCelkScore">Celkové skóre: ${score} z ${pocetPrikladu}</p>`;
-
-  // po vyhodnocení přepnout tlačítko na další kolo
-  cvikButton.innerText = "Další kolo";
-  cvikButton.removeEventListener("click", kontrola);
-  cvikButton.addEventListener("click", nextRound);
+  
 }
 // funkce pro vyčištění příkladů a polí
 function clearPriklady() {
